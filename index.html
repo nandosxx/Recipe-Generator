@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Generator</h1>
+        
+        <!-- Text input section -->
+        <div class="input-section">
+            <h2>Enter Ingredients</h2>
+            <textarea id="ingredient-input" placeholder="Enter ingredients separated by commas..."></textarea>
+            <button onclick="addManualIngredients()">Add Ingredients</button>
+        </div>
+
+        <!-- Common ingredients section -->
+        <div class="common-ingredients">
+            <h2>Common Ingredients</h2>
+            <div class="ingredient-grid">
+                <div class="ingredient-icon" onclick="addIngredient('Tomatoes')">
+                    🍅 Tomatoes
+                </div>
+                <div class="ingredient-icon" onclick="addIngredient('Pasta')">
+                    🍝 Pasta
+                </div>
+                <div class="ingredient-icon" onclick="addIngredient('Chicken')">
+                    🍗 Chicken
+                </div>
+                <div class="ingredient-icon" onclick="addIngredient('Garlic')">
+                    🧄 Garlic
+                </div>
+                <div class="ingredient-icon" onclick="addIngredient('Onion')">
+                    🧅 Onion
+                </div>
+                <div class="ingredient-icon" onclick="addIngredient('Cheese')">
+                    🧀 Cheese
+                </div>
+                <div class="ingredient-icon" onclick="addIngredient('Ground Beef')">
+                    🥩 Ground Beef
+                </div>
+                <div class="ingredient-icon" onclick="addIngredient('Bell Peppers')">
+                    🫑 Bell Peppers
+                </div>
+            </div>
+        </div>
+
+        <!-- Selected ingredients display -->
+        <div class="selected-ingredients">
+            <h2>Selected Ingredients:</h2>
+            <div id="selected-list"></div>
+        </div>
+
+        <!-- Generate button -->
+        <button id="generate-btn" onclick="generateRecipe()">Generate Recipe</button>
+
+        <!-- Recipe display section -->
+        <div id="recipe-output" class="recipe-section"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
